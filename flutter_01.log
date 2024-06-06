@@ -1,0 +1,96 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter pub upgrade
+
+## exception
+
+PathAccessException: PathAccessException: Directory listing failed, path = '/Users/developer-1/Desktop/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework' (OS Error: Permission denied, errno = 13)
+
+```
+#0      _Directory._fillWithDirectoryListing (dart:io-patch/directory_patch.dart:42:24)
+#1      _Directory.listSync (dart:io/directory_impl.dart:228:5)
+#2      ForwardingDirectory.listSync (package:file/src/forwarding/forwarding_directory.dart:43:12)
+#3      ForwardingDirectory.listSync (package:file/src/forwarding/forwarding_directory.dart:43:12)
+#4      ArtifactUpdater._removeDenylistedFiles (package:flutter_tools/src/cache.dart:1039:53)
+#5      ArtifactUpdater._downloadArchive (package:flutter_tools/src/cache.dart:1165:7)
+<asynchronous suspension>
+#6      EngineCachedArtifact.updateInner (package:flutter_tools/src/cache.dart:944:7)
+<asynchronous suspension>
+#7      CachedArtifact.update (package:flutter_tools/src/cache.dart:846:5)
+<asynchronous suspension>
+#8      Cache.updateAll (package:flutter_tools/src/cache.dart:713:9)
+<asynchronous suspension>
+#9      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1691:7)
+<asynchronous suspension>
+#10     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1394:27)
+<asynchronous suspension>
+#11     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#12     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#13     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:360:9)
+<asynchronous suspension>
+#14     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#15     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:300:5)
+<asynchronous suspension>
+#16     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:119:9)
+<asynchronous suspension>
+#17     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#18     main (package:flutter_tools/executable.dart:94:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel master, 3.21.0-11.0.pre.67, on macOS 14.3 23D56 darwin-arm64, locale en-IN)
+    [32m•[39m Flutter version 3.21.0-11.0.pre.67 on channel master at /Users/developer-1/Desktop/flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision 616574251c (3 hours ago), 2024-03-21 05:00:37 -0400
+    [32m•[39m Engine revision 6de3d9b619
+    [32m•[39m Dart version 3.4.0 (build 3.4.0-255.0.dev)
+    [32m•[39m DevTools version 2.34.0-dev.5
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    [32m•[39m Android SDK at /Users/developer-1/Library/Android/sdk
+    [32m•[39m Platform android-34, build-tools 34.0.0
+    [32m•[39m Java binary at: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 17.0.6+0-17.0.6b829.9-10027231)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Xcode - develop for iOS and macOS (Xcode 15.2)
+    [32m•[39m Xcode at /Applications/Xcode.app/Contents/Developer
+    [32m•[39m Build 15C500b
+    [32m•[39m CocoaPods version 1.14.3
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[32m[✓][39m Android Studio (version 2022.3)
+    [32m•[39m Android Studio at /Applications/Android Studio.app/Contents
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build 17.0.6+0-17.0.6b829.9-10027231)
+
+[32m[✓][39m VS Code (version 1.87.2)
+    [32m•[39m VS Code at /Applications/Visual Studio Code.app/Contents
+    [32m•[39m Flutter extension version 3.84.0
+
+[32m[✓][39m Connected device (4 available)
+    [32m•[39m sdk gphone64 arm64 (mobile)     • emulator-5554         • android-arm64  • Android 14 (API 34) (emulator)
+    [32m•[39m macOS (desktop)                 • macos                 • darwin-arm64   • macOS 14.3 23D56 darwin-arm64
+    [32m•[39m Mac Designed for iPad (desktop) • mac-designed-for-ipad • darwin         • macOS 14.3 23D56 darwin-arm64
+    [32m•[39m Chrome (web)                    • chrome                • web-javascript • Google Chrome 122.0.6261.129
+
+[32m[✓][39m Network resources
+    [32m•[39m All expected network resources are available.
+
+[32m•[39m No issues found!
+```
