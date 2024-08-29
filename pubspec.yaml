@@ -55,7 +55,7 @@ dependencies:
   flutter_paypal: ^0.2.0
   flutterwave_standard: ^1.0.4
   uuid: ^4.0.0
-  payu_checkoutpro_flutter: ^1.0.4
+  # payu_checkoutpro_flutter: ^1.0.4
   pay_with_paystack: ^1.0.6
   # Payment Gateways
   # Firebase - OneSignal

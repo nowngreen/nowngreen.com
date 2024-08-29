@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:payu_checkoutpro_flutter/PayUConstantKeys.dart';
+// import 'package:flutter/material.dart';
+// import 'package:payu_checkoutpro_flutter/PayUConstantKeys.dart';
 //Remove this plugin when you implement the salt at your server..
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
@@ -13,34 +13,7 @@ class PayUHashService {
   String merchantSalt = ""; // Add you Salt here.
   String merchantSecretKey = ""; // Add Merchant Secrete Key - Optional
 
-  Map generateHash(Map response) {
-    debugPrint("merchantSalt =====> $merchantSalt");
-    var hashName = response[PayUHashConstantsKeys.hashName];
-    var hashStringWithoutSalt = response[PayUHashConstantsKeys.hashString];
-    var hashType = response[PayUHashConstantsKeys.hashType];
-    var postSalt = response[PayUHashConstantsKeys.postSalt];
-    // debugPrint("hashName =====> $hashName");
-    // debugPrint("hashStringWithoutSalt =====> $hashStringWithoutSalt");
-    // debugPrint("hashType =====> $hashType");
-    // debugPrint("postSalt =====> $postSalt");
-
-    var hash = "";
-
-    if (hashType == PayUHashConstantsKeys.hashVersionV2) {
-      hash = getHmacSHA256Hash(hashStringWithoutSalt, merchantSalt);
-    } else if (hashName == PayUHashConstantsKeys.mcpLookup) {
-      hash = getHmacSHA1Hash(hashStringWithoutSalt, merchantSecretKey);
-    } else {
-      var hashDataWithSalt = hashStringWithoutSalt + merchantSalt;
-      if (postSalt != null) {
-        hashDataWithSalt = hashDataWithSalt + postSalt;
-      }
-      hash = getSHA512Hash(hashDataWithSalt);
-    }
-    //Don't use this method, get the hash from your backend.
-    var finalHash = {hashName: hash};
-    return finalHash;
-  }
+ 
 
   //Don't use this method get the hash from your backend.
   String getSHA512Hash(String hashData) {

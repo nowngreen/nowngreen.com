@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "901764571228",
+    "project_id": "nowngreen-f66bc",
+    "storage_bucket": "nowngreen-f66bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901764571228:android:af2114f59ed748dd328699",
+        "android_client_info": {
+          "package_name": "com.divinetechs.dtlive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS07rgAn0w6aS4qJ2ZHEe-eW3rnPxIeWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

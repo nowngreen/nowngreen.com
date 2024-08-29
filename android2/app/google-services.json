@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "907048035174",
+    "project_id": "appngreen",
+    "storage_bucket": "appngreen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907048035174:android:35e019c3090f63b9561ea7",
+        "android_client_info": {
+          "package_name": "nowngreen.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "907048035174-r1bbnra96dqr76qkeob108gv68v5j3v3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nowngreen.com",
+            "certificate_hash": "f7ee5022a62c2ae3c83df5a73b39e2926e179cb5"
+          }
+        },
+        {
+          "client_id": "907048035174-25ase68mtdupnj5agrpmnvbt6p9fa5re.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoyogxS-riRLTAJKowpqEqlnK4A5kh4ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907048035174-25ase68mtdupnj5agrpmnvbt6p9fa5re.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "907048035174-h47smt1g8camrtdoqvk6rrkttc8r6rqf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.divinetechs.dtliveapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
